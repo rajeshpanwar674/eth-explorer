@@ -32,6 +32,7 @@ const _range = (start, stop, step) => {
 function Blocks() {
     const classes = useStyles();
     const [blocks, setBlocks] = useState([])
+    const [transactions, setTransactions] = useState([])
 
     console.log({ blocks });
 
@@ -40,13 +41,15 @@ function Blocks() {
         setBlocks((old) => {
             return [result, ...old]
         });
+        setTransactions((old) => {
+            return [result.transactions, ...old]
+        });
     }
 
     useEffect(async () => {
         const latest = await web3.eth.getBlockNumber()
         const blockNumbers = _range(latest - n, latest + 1, 1)
         const batch = new web3.eth.BatchRequest()
-
         blockNumbers.forEach((blockNumber) => {
             batch.add(web3.eth.getBlock.request(blockNumber, storeLocalCopy))
         })
