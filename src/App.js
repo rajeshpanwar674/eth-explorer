@@ -1,5 +1,4 @@
 import "./App.css";
-import { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Blocks from "./components/blocks";
 
