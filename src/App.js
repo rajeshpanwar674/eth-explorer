@@ -2,11 +2,12 @@ import logo from "./logo.svg";
 import "./App.css";
 import { useEffect, useState } from "react";
 import Web3 from 'web3';
+const web3 = new Web3('https://data-seed-prebsc-1-s1.binance.org:8545/');
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
 
-const searchOverWeb3 = (searchTerm)=>{
+const searchOverweb3 = (searchTerm)=>{
   
   var requestStr = searchTerm.split('0x').join('');
 
@@ -24,9 +25,10 @@ const searchOverWeb3 = (searchTerm)=>{
 }
 
 const goToBlockInfos = (requestStr)=> {
+  debugger;
   console.log(requestStr);
 
-  Web3.eth.getBlock(requestStr,function(error, result) {
+  web3.eth.getBlock(requestStr,function(error, result) {
       if(!error) {
         console.log(result);
       } else {
@@ -89,7 +91,7 @@ const goToTxInfos  = (requestStr)=> {
                   className="btn_search"
                   onClick={(e) => {
                     debugger;
-                    searchOverWeb3(searchTerm);
+                    searchOverweb3(searchTerm);
                   }}
                   disabled=""
                 >
