@@ -1,43 +1,1596 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html lang="en" class="js-focus-visible" data-js-focus-visible="">
+    <head>
+        <meta charset="utf-8" />
+        <title>Lgcy</title>
+        
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none'" />
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
+        <!-- <meta http-equiv="Content-Security-Policy" content="object-src 'self'"> -->
+        <!-- <meta http-equiv="Content-Security-Policy" content="base-uri 'self'"> -->
+        <!-- <meta http-equiv="Content-Security-Policy" content="frame-src 'self'"> -->
+        <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self'">  -->
+		<link rel="icon" type="image/x-icon" href="/assets/img/icon_white.png?2" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		
+    </head>
+    <body class="ng-tns-0-0 lighttheme">
+    <div class="loader_new" id="loader_new" style="display: none;">
+        <img src="assets/img/loader_new.gif" class="img-fluid" />
+    </div>
+    <app-root _nghost-c0="" ng-version="7.1.4">
+        <router-outlet></router-outlet>
+        <app-home _nghost-c1="">
+            <app-header>
+                <header class="header-transparent" id="header">
+                    <div class="container-fluid">
+                        <div class="logo float-left">
+                            <a  href="/">
+                                <div class="d-flex">
+                                    <div><img alt="" class="img-fluid shape-icon" src="images/logo_new_trans.png" /></div>
+                                </div>
+                            </a>
+                        </div>
+                        <nav class="navbar navbar-expand-lg nav-menu">
+                            <div class="headerCanvas">
+                                <div class="headerCanvasContainer"><div id="headerCanvas"></div></div>
+                            </div>
+                            <button aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNavAltMarkup" data-toggle="collapse" type="button">
+                                <img height="20" src="assets/img/menu-icon.png" />
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                <ul class="ml-0 d-lg-flex mr-auto ml-lg-3 align-items-center" style="font-weight: 700;">
+                                    <li><a routerlink="/" style="font-weight: 700 !important;" href="/">HOME PAGE</a></li>
+                                    <li><a routerlink="/" style="font-weight: 700 !important;" href="/">BLOCKCHAIN</a></li>
+                                    <li><a routerlink="/" style="font-weight: 700 !important;" href="/">TOKENS</a></li>
+                                    <li><a routerlink="/" style="font-weight: 700 !important;" href="/">COMMITTEE</a></li>
+                                    <!-- <li class="dark-dropdown">
+                                        <div class="btn-group" dropdown="">
+                                            <div
+                                                aria-controls="dropdown-basic"
+                                                class="dropdown-toggle py-1 blockChain"
+                                                dropdowntoggle=""
+                                                id="button-basic"
+                                                style="cursor: pointer; font-weight: 700 !important;"
+                                                aria-haspopup="true"
+                                            >
+                                                BLOCKCHAIN
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="dark-dropdown">
+                                        <div class="btn-group" dropdown="">
+                                            <div
+                                                aria-controls="dropdown-basic"
+                                                class="dropdown-toggle py-1 tokken"
+                                                dropdowntoggle=""
+                                                id="button-basic"
+                                                style="cursor: pointer; font-weight: 700 !important;"
+                                                aria-haspopup="true"
+                                            >
+                                                TOKENS
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="dark-dropdown">
+                                        <div class="btn-group" dropdown="">
+                                            <div
+                                                aria-controls="dropdown-basic"
+                                                class="dropdown-toggle py-1 commitee"
+                                                dropdowntoggle=""
+                                                id="button-basic"
+                                                style="cursor: pointer; font-weight: 700 !important;"
+                                                aria-haspopup="true"
+                                            >
+                                                COMMITTEE
+                                            </div>
+                                            
+                                        </div>
+                                    </li><!---->
+                                    <li><a href="https://forms.gle/KTaKt6hTPwKY2EULA" style="cursor: pointer; font-weight: 700 !important;" target="_blank">REPORTING BUGS</a></li>
+                                </ul>
+                                <ul class="d-lg-flex align-items-center" style="cursor: pointer;">
+                                    <!----><!---->
+                                    <li><i class="bx bxs-moon mr-1 light-black"></i></li>
+                                </ul>
+                                <!----><!---->
+                                <ul class="d-lg-flex align-items-center" style="font-weight: 700;">
+                                    <li>
+                                        <a class="loggout" routerlink="/login" style="cursor: pointer; font-weight: 700 !important;" href="/login"><i class="bx bx-user mr-1"></i> Login</a>
+                                    </li>
+                                </ul>
+                                <!---->
+                            </div>
+                        </nav>
+                    </div>
+                </header>
+            </app-header>
+            <main  id="main">
+                <section class="search_box">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <app-search class="col-md-12 col-lg-12 aos-init aos-animate d-flex justify-content-end" data-aos="fade-up" _nghost-c3="">
+                                <div class="search_option">
+                                    <form autocomplete="off" class="ng-untouched ng-pristine ng-invalid" novalidate="">
+                                        <div class="row">
+                                            <div class="input-group col-md-10">
+                                                <span class="search_icon"><i class="bx bx-search"></i></span>
+                                                <input
+                                                    aria-label=""
+                                                    class="form-control ng-untouched ng-pristine ng-invalid"
+                                                    name="searchkey"
+                                                    ngmodel=""
+                                                    placeholder="Search by Address/TXn Hash/Token/Block"
+                                                    required=""
+                                                    type="text"
+                                                />
+                                                <div class="input-group-prepend">
+                                                    <select class="form-control ng-untouched ng-pristine ng-valid" name="searchFilter" ngmodel="">
+                                                        <option value="all">All Filters</option>
+                                                        <option value="address">Address</option>
+                                                        <option value="hash">Txn Hash</option>
+                                                        <option value="token">Token</option>
+                                                        <option value="block">Block</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2"><button class="btn_search" type="submit" disabled="">Search</button></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </app-search>
+                        </div>
+                    </div>
+                </section>
+                <section class="news_section">
+                    <div  class="container-fluid">
+                        <div  class="row">
+                            <div  class="col-md-12">
+                                <div class="simple-marquee-container">
+                                    <div class="marquee-sibling"><i class="bx bx-news"></i></div>
+                                    <div class="marquee">
+                                        <div class="scroll-cnt">
+                                            <ng-marquee duration="30s" _nghost-c4="">
+                                                <div class="ng-marquee ng-marquee-stop-on-hover">
+                                                    <span style="animation-duration: 30s;">
+                                                        <ul style="display: flex; list-style-type: none;">
+                                                            <li>WELCOME TO LGCY Stress testing is going on MainNet</li>
+                                                        </ul>
+                                                    </span>
+                                                </div>
+                                            </ng-marquee>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="block_count_section">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row no-gutters">
+                                            <div class="col border-right">
+                                                <div class="text-center">
+                                                    <h3 id="number1">624650</h3>
+                                                    <p>Latest Block Number</p>
+                                                </div>
+                                            </div>
+                                            <div class="col border-right">
+                                                <div class="text-center">
+                                                    <h3 id="number2">87</h3>
+                                                    <p>Total Txns</p>
+                                                </div>
+                                            </div>
+                                            <div class="col border-right">
+                                                <div class="text-center">
+                                                    <h3 id="number3">25</h3>
+                                                    <p>Total Accounts</p>
+                                                </div>
+                                            </div>
+                                            <div class="col border-right">
+                                                <div class="text-center">
+                                                    <h3 id="number4">0/748</h3>
+                                                    <p>Current/Max TPS</p>
+                                                </div>
+                                            </div>
+                                            <div class="col border-right">
+                                                <div class="text-center">
+                                                    <h3 id="number5">19</h3>
+                                                    <p>Total Nodes</p>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="text-center">
+                                                    <h3 id="number6">600000</h3>
+                                                    <p>Total LGCY Frozen</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="chart_section">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <p>Daily LGCY &amp; USDL Volume</p>
+                                        <figure class="highcharts-figure">
+                                            <div id="container" data-highcharts-chart="20">
+                                                <div
+                                                    id="highcharts-8y9ryqm-260"
+                                                    dir="ltr"
+                                                    class="highcharts-container"
+                                                    style="position: relative; overflow: hidden; width: 800px; height: 400px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
+                                                >
+                                                    <svg
+                                                        version="1.1"
+                                                        class="highcharts-root"
+                                                        style="font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Helvetica, sans-serif; font-size: 12px;"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="800"
+                                                        height="400"
+                                                        viewBox="0 0 800 400"
+                                                    >
+                                                        <desc>Created with Highcharts 6.2.0</desc>
+                                                        <defs>
+                                                            <clipPath id="highcharts-8y9ryqm-261"><rect x="0" y="0" width="724" height="268" fill="none"></rect></clipPath>
+                                                        </defs>
+                                                        <rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="800" height="400" rx="0" ry="0"></rect>
+                                                        <rect fill="none" class="highcharts-plot-background" x="66" y="54" width="724" height="268"></rect>
+                                                        <g class="highcharts-grid highcharts-xaxis-grid" data-z-index="1">
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 125.5 54 L 125.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 186.5 54 L 186.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 246.5 54 L 246.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 306.5 54 L 306.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 367.5 54 L 367.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 427.5 54 L 427.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 487.5 54 L 487.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 548.5 54 L 548.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 608.5 54 L 608.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 668.5 54 L 668.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 729.5 54 L 729.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 789.5 54 L 789.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 65.5 54 L 65.5 322" opacity="1"></path>
+                                                        </g>
+                                                        <g class="highcharts-grid highcharts-yaxis-grid" data-z-index="1">
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 66 322.5 L 790 322.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 66 255.5 L 790 255.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 66 188.5 L 790 188.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 66 121.5 L 790 121.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 66 53.5 L 790 53.5" opacity="1"></path>
+                                                        </g>
+                                                        <rect fill="none" class="highcharts-plot-border" data-z-index="1" x="66" y="54" width="724" height="268"></rect>
+                                                        <g class="highcharts-axis highcharts-xaxis" data-z-index="2">
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 125.5 322 L 125.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 186.5 322 L 186.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 246.5 322 L 246.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 306.5 322 L 306.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 367.5 322 L 367.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 427.5 322 L 427.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 487.5 322 L 487.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 548.5 322 L 548.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 608.5 322 L 608.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 668.5 322 L 668.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 729.5 322 L 729.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 790.5 322 L 790.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 65.5 322 L 65.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-axis-line" stroke="#ccd6eb" stroke-width="1" data-z-index="7" d="M 66 322.5 L 790 322.5"></path>
+                                                        </g>
+                                                        <g class="highcharts-axis highcharts-yaxis" data-z-index="2"><path fill="none" class="highcharts-axis-line" data-z-index="7" d="M 66 54 L 66 322"></path></g>
+                                                        <g class="highcharts-series-group" data-z-index="3">
+                                                            <g
+                                                                data-z-index="0.1"
+                                                                class="highcharts-series highcharts-series-0 highcharts-line-series"
+                                                                transform="translate(66,54) scale(1 1)"
+                                                                clip-path="url(https://lgcyscan.network/#highcharts-8y9ryqm-261)"
+                                                            >
+                                                                <path
+                                                                    fill="none"
+                                                                    d="M 30.166666666667 268 L 90.5 268 L 150.83333333333 268 L 211.16666666667 268 L 271.5 268 L 331.83333333333 268 L 392.16666666667 268 L 452.5 268 L 512.83333333333 268 L 573.16666666667 259.69173046930166 L 633.5 40.91556 L 693.83333333333 267.9196"
+                                                                    class="highcharts-graph"
+                                                                    data-z-index="1"
+                                                                    stroke="#2740a6"
+                                                                    stroke-width="2"
+                                                                    stroke-linejoin="round"
+                                                                    stroke-linecap="round"
+                                                                ></path>
+                                                                <path
+                                                                    fill="none"
+                                                                    d="M 20.166666666667 268 L 30.166666666667 268 L 90.5 268 L 150.83333333333 268 L 211.16666666667 268 L 271.5 268 L 331.83333333333 268 L 392.16666666667 268 L 452.5 268 L 512.83333333333 268 L 573.16666666667 259.69173046930166 L 633.5 40.91556 L 693.83333333333 267.9196 L 703.83333333333 267.9196"
+                                                                    stroke-linejoin="round"
+                                                                    stroke="rgba(192,192,192,0.0001)"
+                                                                    stroke-width="22"
+                                                                    visibility="visible"
+                                                                    data-z-index="2"
+                                                                    class="highcharts-tracker-line"
+                                                                ></path>
+                                                            </g>
+                                                            <g
+                                                                data-z-index="0.1"
+                                                                class="highcharts-markers highcharts-series-0 highcharts-line-series highcharts-tracker"
+                                                                transform="translate(66,54) scale(1 1)"
+                                                                clip-path="url(https://lgcyscan.network/#highcharts-8y9ryqm-274)"
+                                                            >
+                                                                <path fill="#2740a6" d="M 34 268 A 4 4 0 1 1 33.99999800000017 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 94 268 A 4 4 0 1 1 93.99999800000016 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 154 268 A 4 4 0 1 1 153.99999800000018 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 215 268 A 4 4 0 1 1 214.99999800000018 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 275 268 A 4 4 0 1 1 274.9999980000002 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 335 268 A 4 4 0 1 1 334.9999980000002 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 396 268 A 4 4 0 1 1 395.9999980000002 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 456 268 A 4 4 0 1 1 455.9999980000002 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 516 268 A 4 4 0 1 1 515.9999980000001 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 577 260 A 4 4 0 1 1 576.9999980000001 259.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 637 41 A 4 4 0 1 1 636.9999980000001 40.99600000066666 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 697 268 A 4 4 0 1 1 696.9999980000001 267.99600000066664 Z" class="highcharts-point"></path>
+                                                            </g>
+                                                            <g
+                                                                data-z-index="0.1"
+                                                                class="highcharts-series highcharts-series-1 highcharts-line-series"
+                                                                transform="translate(66,54) scale(1 1)"
+                                                                clip-path="url(https://lgcyscan.network/#highcharts-8y9ryqm-261)"
+                                                            >
+                                                                <path
+                                                                    fill="none"
+                                                                    d="M 30.166666666667 268 L 90.5 268 L 150.83333333333 268 L 211.16666666667 268 L 271.5 268 L 331.83333333333 268 L 392.16666666667 268 L 452.5 268 L 512.83333333333 268 L 573.16666666667 267.999789888 L 633.5 267.999431036 L 693.83333333333 267.99986332"
+                                                                    class="highcharts-graph"
+                                                                    data-z-index="1"
+                                                                    stroke="#28a745"
+                                                                    stroke-width="2"
+                                                                    stroke-linejoin="round"
+                                                                    stroke-linecap="round"
+                                                                ></path>
+                                                                <path
+                                                                    fill="none"
+                                                                    d="M 20.166666666667 268 L 30.166666666667 268 L 90.5 268 L 150.83333333333 268 L 211.16666666667 268 L 271.5 268 L 331.83333333333 268 L 392.16666666667 268 L 452.5 268 L 512.83333333333 268 L 573.16666666667 267.999789888 L 633.5 267.999431036 L 693.83333333333 267.99986332 L 703.83333333333 267.99986332"
+                                                                    stroke-linejoin="round"
+                                                                    stroke="rgba(192,192,192,0.0001)"
+                                                                    stroke-width="22"
+                                                                    visibility="visible"
+                                                                    data-z-index="2"
+                                                                    class="highcharts-tracker-line"
+                                                                ></path>
+                                                            </g>
+                                                            <g
+                                                                data-z-index="0.1"
+                                                                class="highcharts-markers highcharts-series-1 highcharts-line-series highcharts-tracker"
+                                                                transform="translate(66,54) scale(1 1)"
+                                                                clip-path="url(https://lgcyscan.network/#highcharts-8y9ryqm-274)"
+                                                            >
+                                                                <path fill="#28a745" d="M 30 264 L 34 268 30 272 26 268 Z" class="highcharts-point"></path>
+                                                                <path fill="#28a745" d="M 90 264 L 94 268 90 272 86 268 Z" class="highcharts-point"></path>
+                                                                <path fill="#28a745" d="M 150 264 L 154 268 150 272 146 268 Z" class="highcharts-point"></path>
+                                                                <path fill="#28a745" d="M 211 264 L 215 268 211 272 207 268 Z" class="highcharts-point"></path>
+                                                                <path fill="#28a745" d="M 271 264 L 275 268 271 272 267 268 Z" class="highcharts-point"></path>
+                                                                <path fill="#28a745" d="M 331 264 L 335 268 331 272 327 268 Z" class="highcharts-point"></path>
+                                                                <path fill="#28a745" d="M 392 264 L 396 268 392 272 388 268 Z" class="highcharts-point"></path>
+                                                                <path fill="#28a745" d="M 452 264 L 456 268 452 272 448 268 Z" class="highcharts-point"></path>
+                                                                <path fill="#28a745" d="M 512 264 L 516 268 512 272 508 268 Z" class="highcharts-point"></path>
+                                                                <path fill="#28a745" d="M 573 264 L 577 268 573 272 569 268 Z" class="highcharts-point"></path>
+                                                                <path fill="#28a745" d="M 633 264 L 637 268 633 272 629 268 Z" class="highcharts-point"></path>
+                                                                <path fill="#28a745" d="M 693 264 L 697 268 693 272 689 268 Z" class="highcharts-point"></path>
+                                                            </g>
+                                                        </g>
+                                                        <text x="400" text-anchor="middle" class="highcharts-title" data-z-index="4" style="color: #333333; font-size: 18px; fill: #333333;" y="24">
+                                                            <tspan>Daily LGCY &amp; USDL Volume</tspan>
+                                                        </text>
+                                                        <text x="400" text-anchor="middle" class="highcharts-subtitle" data-z-index="4" style="color: #666666; fill: #666666;" y="53"></text>
+                                                        <g class="highcharts-legend" data-z-index="7" transform="translate(327,356)">
+                                                            <rect fill="none" class="highcharts-legend-box" rx="0" ry="0" x="0" y="0" width="145" height="29" visibility="visible"></rect>
+                                                            <g data-z-index="1">
+                                                                <g>
+                                                                    <g class="highcharts-legend-item highcharts-line-series highcharts-color-undefined highcharts-series-0" data-z-index="1" transform="translate(8,3)">
+                                                                        <path fill="none" d="M 0 11 L 16 11" class="highcharts-graph" stroke="#2740a6" stroke-width="2"></path>
+                                                                        <path fill="#2740a6" d="M 12 11 A 4 4 0 1 1 11.999998000000167 10.996000000666664 Z" class="highcharts-point"></path>
+                                                                        <text x="21" style="color: #333333; font-size: 12px; font-weight: bold; cursor: pointer; fill: #333333;" text-anchor="start" data-z-index="2" y="15">
+                                                                            <tspan>LGCY</tspan>
+                                                                        </text>
+                                                                    </g>
+                                                                    <g class="highcharts-legend-item highcharts-line-series highcharts-color-undefined highcharts-series-1" data-z-index="1" transform="translate(83.02392196655273,3)">
+                                                                        <path fill="none" d="M 0 11 L 16 11" class="highcharts-graph" stroke="#28a745" stroke-width="2"></path>
+                                                                        <path fill="#28a745" d="M 8 7 L 12 11 8 15 4 11 Z" class="highcharts-point"></path>
+                                                                        <text x="21" y="15" style="color: #333333; font-size: 12px; font-weight: bold; cursor: pointer; fill: #333333;" text-anchor="start" data-z-index="2">
+                                                                            <tspan>USDL</tspan>
+                                                                        </text>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                        <g class="highcharts-axis-labels highcharts-xaxis-labels" data-z-index="7">
+                                                            <text x="96.16666666666333" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Jan</text>
+                                                            <text x="156.50000000000335" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Feb</text>
+                                                            <text x="216.83333333333334" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Mar</text>
+                                                            <text x="277.16666666666333" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Apr</text>
+                                                            <text x="337.5000000000033" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">May</text>
+                                                            <text x="397.8333333333333" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Jun</text>
+                                                            <text x="458.16666666666333" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Jul</text>
+                                                            <text x="518.5000000000034" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Aug</text>
+                                                            <text x="578.8333333333334" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Sep</text>
+                                                            <text x="639.1666666666633" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Oct</text>
+                                                            <text x="699.5000000000034" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Nov</text>
+                                                            <text x="759.8333333333334" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Dec</text>
+                                                        </g>
+                                                        <g class="highcharts-axis-labels highcharts-yaxis-labels" data-z-index="7">
+                                                            <text x="51" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="326" opacity="1">0</text>
+                                                            <text x="51" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="259" opacity="1">250M</text>
+                                                            <text x="51" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="192" opacity="1">500M</text>
+                                                            <text x="51" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="125" opacity="1">750M</text>
+                                                            <text x="51" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="58" opacity="1"><tspan>1 000M</tspan></text>
+                                                        </g>
+                                                        <text x="790" class="highcharts-credits" text-anchor="end" data-z-index="8" style="cursor: pointer; color: #999999; font-size: 9px; fill: #999999;" y="395">lgcyscan.network</text>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="row">
+                                    <div class="col-lg-6 pr-lg-2">
+                                        <div class="blue_box">
+                                            <particles>
+                                                <div class="particles-container" style="position: absolute; width: 100%; height: 100%; z-index: -1; inset: 0px;">
+                                                    <canvas d-particles="" width="355" height="148" style="width: 100%; height: 100%;"></canvas>
+                                                </div>
+                                            </particles>
+                                            <div class="row mt-2">
+                                                <div class="col-lg-5">
+                                                    <div class="bluebox_icon text-center"><img class="img-fluid" src="images/Logo.png?6" /></div>
+                                                </div>
+                                                <div class="col-lg-7">
+                                                    <p>LGCY</p>
+                                                    <h4>0.0001 USD</h4>
+                                                </div>
+                                            </div>
+                                            <h6 class="mt-4">0% <i class="bx bxs-down-arrow-alt"></i></h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 pl-lg-2">
+                                        <div class="blue_box">
+                                            <particles>
+                                                <div class="particles-container" style="position: absolute; width: 100%; height: 100%; z-index: -1; inset: 0px;">
+                                                    <canvas width="355" height="148" style="width: 100%; height: 100%;"></canvas>
+                                                </div>
+                                            </particles>
+                                            <img class="img-fluid" src="images/market_cap.png" />
+                                            <p class="mt-3">Market Cap</p>
+                                            <h4>0</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 pr-lg-2">
+                                        <div class="blue_box">
+                                            <particles>
+                                                <div class="particles-container" style="position: absolute; width: 100%; height: 100%; z-index: -1; inset: 0px;">
+                                                    <canvas width="355" height="148" style="width: 100%; height: 100%;"></canvas>
+                                                </div>
+                                            </particles>
+                                            <img class="img-fluid" src="images/volume_img.png" />
+                                            <p class="mt-3">24H Volume</p>
+                                            <h4>0 USD</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 pl-lg-2">
+                                        <div class="blue_box">
+                                            <particles>
+                                                <div class="particles-container" style="position: absolute; width: 100%; height: 100%; z-index: -1; inset: 0px;">
+                                                    <canvas width="355" height="148" style="width: 100%; height: 100%;"></canvas>
+                                                </div>
+                                            </particles>
+                                            <img class="img-fluid" src="images/contracts.png" />
+                                            <p class="mt-3">Transactions</p>
+                                            <h4>87</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="chart_section">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="block_transaction" id="tabs">
+                                            <tabset class="tab-container">
+                                                <ul class="nav nav-tabs" role="tablist" aria-label="Tabs">
+                                                    <!---->
+                                                    <li class="nav-item active">
+                                                        <a class="nav-link active" href="javascript:void(0);" role="tab" aria-controls="tab1" aria-selected="true" id="tab1-link">
+                                                            <span>Blocks</span>
+                                                            <!---->
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="javascript:void(0);" role="tab" aria-controls="" aria-selected="false" id="">
+                                                            <span>Transactions</span>
+                                                            <!---->
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <div class="tab-content">
+                                                    <tab heading="Blocks" id="tab1" class="active tab-pane" role="tabpanel" aria-labelledby="tab1-link">
+                                                        <div class="block_table">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th class="text-center">Block</th>
+                                                                            <th class="text-center">Age</th>
+                                                                            <th class="text-center">Status</th>
+                                                                            <th class="text-center">Produced by</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <!---->
+                                                                    <tbody 
+                                                                        <!---->
+                                                                        <tr>
+                                                                            <td class="text-center">624650</td>
+                                                                            <!---->
+                                                                            <td class="text-center">a few seconds ago</td>
+                                                                            <td class="text-center">Completed</td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LV3VBJ6aaDe69H9d7oUNmKZimNcn5RZqTu">LV3VBJ6aaDe69H9d7oUNmKZimNcn5RZqTu</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">624649</td>
+                                                                            <!---->
+                                                                            <td class="text-center">a few seconds ago</td>
+                                                                            <td class="text-center">Completed</td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LLgRvRY9afzRXd59QQUr8hH6er2ULkPgRY">LLgRvRY9afzRXd59QQUr8hH6er2ULkPgRY</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">624648</td>
+                                                                            <!---->
+                                                                            <td class="text-center">a few seconds ago</td>
+                                                                            <td class="text-center">Completed</td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LRn55CnGe6tgpHFEPHk89Rifo4w3rnmmov">LRn55CnGe6tgpHFEPHk89Rifo4w3rnmmov</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">624647</td>
+                                                                            <!---->
+                                                                            <td class="text-center">a minute ago</td>
+                                                                            <td class="text-center">Completed</td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LVXgD2qqFNmzZMtJ3bGdZtbs4yhHNKbVFk">LVXgD2qqFNmzZMtJ3bGdZtbs4yhHNKbVFk</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">624646</td>
+                                                                            <!---->
+                                                                            <td class="text-center">a minute ago</td>
+                                                                            <td class="text-center">Completed</td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LR7B7622v7dffSiX6JigN8ynCowyWX1S1e">LR7B7622v7dffSiX6JigN8ynCowyWX1S1e</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">624645</td>
+                                                                            <!---->
+                                                                            <td class="text-center">a minute ago</td>
+                                                                            <td class="text-center">Completed</td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LLQGFqfwoBRhkPht292fq3TGXJ6vN3ymQ2">LLQGFqfwoBRhkPht292fq3TGXJ6vN3ymQ2</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">624644</td>
+                                                                            <!---->
+                                                                            <td class="text-center">a minute ago</td>
+                                                                            <td class="text-center">Completed</td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LPku6HPY23yBCzF6hAnny4yRsQwT8BvjAU">LPku6HPY23yBCzF6hAnny4yRsQwT8BvjAU</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">624643</td>
+                                                                            <!---->
+                                                                            <td class="text-center">2 minutes ago</td>
+                                                                            <td class="text-center">Completed</td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LV3VBJ6aaDe69H9d7oUNmKZimNcn5RZqTu">LV3VBJ6aaDe69H9d7oUNmKZimNcn5RZqTu</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">624642</td>
+                                                                            <!---->
+                                                                            <td class="text-center">2 minutes ago</td>
+                                                                            <td class="text-center">Completed</td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LLgRvRY9afzRXd59QQUr8hH6er2ULkPgRY">LLgRvRY9afzRXd59QQUr8hH6er2ULkPgRY</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">624641</td>
+                                                                            <!---->
+                                                                            <td class="text-center">2 minutes ago</td>
+                                                                            <td class="text-center">Completed</td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LRn55CnGe6tgpHFEPHk89Rifo4w3rnmmov">LRn55CnGe6tgpHFEPHk89Rifo4w3rnmmov</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </tab>
+                                                    <tab heading="Transactions" class="tab-pane" role="tabpanel" aria-labelledby="">
+                                                        <div class="block_table">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th class="text-center">Parent Hash</th>
+                                                                            <th class="text-center">Block</th>
+                                                                            <th class="text-center">Age</th>
+                                                                            <th class="text-center">From</th>
+                                                                            <th class="text-center">Miner</th>
+                                                                            <th class="text-center">Transaction Type</th>
+                                                                            <th class="text-center">Status</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <!---->
+                                                                    <tbody>
+                                                                        <!---->
+                                                                        <tr>
+                                                                            <td class="text-center">
+                                                                                <a
+                                                                                    style="display: inline-block; width: 180px; white-space: nowrap; overflow: hidden !important; text-overflow: ellipsis;"
+                                                                                    target="_blank"
+                                                                                    href="/tx?txid=5bedb6787a1fbaaa47be8a7302484b290e2589c0dbf051daee4ab9311bf0e8d3"
+                                                                                >
+                                                                                    5bedb6787a1fbaaa47be8a7302484b290e2589c0dbf051daee4ab9311bf0e8d3
+                                                                                </a>
+                                                                            </td>
+                                                                            <td class="text-center">446808</td>
+                                                                            <td class="text-center">21 days ago</td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LVXgD2qqFNmzZMtJ3bGdZtbs4yhHNKbVFk">LVXgD2qqFNmzZMtJ3bGdZtbs4yhHNKbVFk</a>
+                                                                            </td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LR7B7622v7dffSiX6JigN8ynCowyWX1S1e">LR7B7622v7dffSiX6JigN8ynCowyWX1S1e</a>
+                                                                            </td>
+                                                                            <td lass="text-center">TriggerSmartContract</td>
+                                                                            <td class="text-center">SUCCESS</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">
+                                                                                <a
+                                                                                    style="display: inline-block; width: 180px; white-space: nowrap; overflow: hidden !important; text-overflow: ellipsis;"
+                                                                                    target="_blank"
+                                                                                    href="/tx?txid=68c0de8f20b23138084cbcf45e24aed8e0282ef4dd716b61752a5d93c86b1532"
+                                                                                >
+                                                                                    68c0de8f20b23138084cbcf45e24aed8e0282ef4dd716b61752a5d93c86b1532
+                                                                                </a>
+                                                                            </td>
+                                                                            <td class="text-center">446808</td>
+                                                                            <td class="text-center">21 days ago</td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LVXgD2qqFNmzZMtJ3bGdZtbs4yhHNKbVFk">LVXgD2qqFNmzZMtJ3bGdZtbs4yhHNKbVFk</a>
+                                                                            </td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LR7B7622v7dffSiX6JigN8ynCowyWX1S1e">LR7B7622v7dffSiX6JigN8ynCowyWX1S1e</a>
+                                                                            </td>
+                                                                            <td class="text-center">UnfreezeBalanceContract</td>
+                                                                            <td class="text-center">SUCCESS</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">
+                                                                                <a
+                                                                                    style="display: inline-block; width: 180px; white-space: nowrap; overflow: hidden !important; text-overflow: ellipsis;"
+                                                                                    target="_blank"
+                                                                                    href="/tx?txid=4df60aaeca0e920a241fc50dd4bd1c208c95d735fb91b62f9de000365589063d"
+                                                                                >
+                                                                                    4df60aaeca0e920a241fc50dd4bd1c208c95d735fb91b62f9de000365589063d
+                                                                                </a>
+                                                                            </td>
+                                                                            <td class="text-center">446960</td>
+                                                                            <td class="text-center">21 days ago</td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LVXgD2qqFNmzZMtJ3bGdZtbs4yhHNKbVFk">LVXgD2qqFNmzZMtJ3bGdZtbs4yhHNKbVFk</a>
+                                                                            </td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LR7B7622v7dffSiX6JigN8ynCowyWX1S1e">LR7B7622v7dffSiX6JigN8ynCowyWX1S1e</a>
+                                                                            </td>
+                                                                            <td class="text-center">WitnessCreateContract</td>
+                                                                            <td class="text-center">SUCCESS</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">
+                                                                                <a
+                                                                                    style="display: inline-block; width: 180px; white-space: nowrap; overflow: hidden !important; text-overflow: ellipsis;"
+                                                                                    target="_blank"
+                                                                                    href="/tx?txid=459ec2eda9855fb7938bcefc7c4032fa5fecd531d02f30da161792264cb82245"
+                                                                                >
+                                                                                    459ec2eda9855fb7938bcefc7c4032fa5fecd531d02f30da161792264cb82245
+                                                                                </a>
+                                                                            </td>
+                                                                            <td class="text-center">403316</td>
+                                                                            <td class="text-center">a month ago</td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LV3VBJ6aaDe69H9d7oUNmKZimNcn5RZqTu">LV3VBJ6aaDe69H9d7oUNmKZimNcn5RZqTu</a>
+                                                                            </td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LR7B7622v7dffSiX6JigN8ynCowyWX1S1e">LR7B7622v7dffSiX6JigN8ynCowyWX1S1e</a>
+                                                                            </td>
+                                                                            <td class="text-center">WitnessCreateContract</td>
+                                                                            <td class="text-center">SUCCESS</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">
+                                                                                <a
+                                                                                    style="display: inline-block; width: 180px; white-space: nowrap; overflow: hidden !important; text-overflow: ellipsis;"
+                                                                                    target="_blank"
+                                                                                    href="/tx?txid=57693356ffc0ed8eb099461a15cdd4dd0d84cf7c4ae3d221827ab446e03dc624"
+                                                                                >
+                                                                                    57693356ffc0ed8eb099461a15cdd4dd0d84cf7c4ae3d221827ab446e03dc624
+                                                                                </a>
+                                                                            </td>
+                                                                            <td class="text-center">403188</td>
+                                                                            <td class="text-center">a month ago</td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LV3VBJ6aaDe69H9d7oUNmKZimNcn5RZqTu">LV3VBJ6aaDe69H9d7oUNmKZimNcn5RZqTu</a>
+                                                                            </td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LPku6HPY23yBCzF6hAnny4yRsQwT8BvjAU">LPku6HPY23yBCzF6hAnny4yRsQwT8BvjAU</a>
+                                                                            </td>
+                                                                            <td class="text-center">TriggerSmartContract</td>
+                                                                            <td class="text-center">SUCCESS</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">
+                                                                                <a
+                                                                                    style="display: inline-block; width: 180px; white-space: nowrap; overflow: hidden !important; text-overflow: ellipsis;"
+                                                                                    target="_blank"
+                                                                                    href="/tx?txid=babbc0c01295e8e34c2356ed21a708d48c935633559c28688706cb39c312fb70"
+                                                                                >
+                                                                                    babbc0c01295e8e34c2356ed21a708d48c935633559c28688706cb39c312fb70
+                                                                                </a>
+                                                                            </td>
+                                                                            <td class="text-center">403188</td>
+                                                                            <td class="text-center">a month ago</td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LV3VBJ6aaDe69H9d7oUNmKZimNcn5RZqTu">LV3VBJ6aaDe69H9d7oUNmKZimNcn5RZqTu</a>
+                                                                            </td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LPku6HPY23yBCzF6hAnny4yRsQwT8BvjAU">LPku6HPY23yBCzF6hAnny4yRsQwT8BvjAU</a>
+                                                                            </td>
+                                                                            <td class="text-center">UnfreezeBalanceContract</td>
+                                                                            <td class="text-center">SUCCESS</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">
+                                                                                <a
+                                                                                    style="display: inline-block; width: 180px; white-space: nowrap; overflow: hidden !important; text-overflow: ellipsis;"
+                                                                                    target="_blank"
+                                                                                    href="/tx?txid=a3c43dbc350e652838f5e27ccf54d425677bb016073577efc8d6f20adb1a6897"
+                                                                                >
+                                                                                    a3c43dbc350e652838f5e27ccf54d425677bb016073577efc8d6f20adb1a6897
+                                                                                </a>
+                                                                            </td>
+                                                                            <td class="text-center">383360</td>
+                                                                            <td class="text-center">a month ago</td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LVXgD2qqFNmzZMtJ3bGdZtbs4yhHNKbVFk">LVXgD2qqFNmzZMtJ3bGdZtbs4yhHNKbVFk</a>
+                                                                            </td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LR7B7622v7dffSiX6JigN8ynCowyWX1S1e">LR7B7622v7dffSiX6JigN8ynCowyWX1S1e</a>
+                                                                            </td>
+                                                                            <td class="text-center">TriggerSmartContract</td>
+                                                                            <td class="text-center">SUCCESS</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">
+                                                                                <a
+                                                                                    style="display: inline-block; width: 180px; white-space: nowrap; overflow: hidden !important; text-overflow: ellipsis;"
+                                                                                    target="_blank"
+                                                                                    href="/tx?txid=ff2499e4b0b0b7b66db6537d6af087b6c961a3268a28a3d332b7d3909ba95033"
+                                                                                >
+                                                                                    ff2499e4b0b0b7b66db6537d6af087b6c961a3268a28a3d332b7d3909ba95033
+                                                                                </a>
+                                                                            </td>
+                                                                            <td class="text-center">383360</td>
+                                                                            <td class="text-center">a month ago</td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LVXgD2qqFNmzZMtJ3bGdZtbs4yhHNKbVFk">LVXgD2qqFNmzZMtJ3bGdZtbs4yhHNKbVFk</a>
+                                                                            </td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LR7B7622v7dffSiX6JigN8ynCowyWX1S1e">LR7B7622v7dffSiX6JigN8ynCowyWX1S1e</a>
+                                                                            </td>
+                                                                            <td class="text-center">TriggerSmartContract</td>
+                                                                            <td class="text-center">SUCCESS</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">
+                                                                                <a
+                                                                                    style="display: inline-block; width: 180px; white-space: nowrap; overflow: hidden !important; text-overflow: ellipsis;"
+                                                                                    target="_blank"
+                                                                                    href="/tx?txid=78cf4e12094c9673f9777045e3b0ef533d5526741918a903a5b27dad2ed34e1c"
+                                                                                >
+                                                                                    78cf4e12094c9673f9777045e3b0ef533d5526741918a903a5b27dad2ed34e1c
+                                                                                </a>
+                                                                            </td>
+                                                                            <td class="text-center">383360</td>
+                                                                            <td class="text-center">a month ago</td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LVXgD2qqFNmzZMtJ3bGdZtbs4yhHNKbVFk">LVXgD2qqFNmzZMtJ3bGdZtbs4yhHNKbVFk</a>
+                                                                            </td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LR7B7622v7dffSiX6JigN8ynCowyWX1S1e">LR7B7622v7dffSiX6JigN8ynCowyWX1S1e</a>
+                                                                            </td>
+                                                                            <td class="text-center">FreezeBalanceContract</td>
+                                                                            <td class="text-center">SUCCESS</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">
+                                                                                <a
+                                                                                    style="display: inline-block; width: 180px; white-space: nowrap; overflow: hidden !important; text-overflow: ellipsis;"
+                                                                                    target="_blank"
+                                                                                    href="/tx?txid=26c9967db4301b66f8c453e69ec684252a3c7fc4d60c9f0cc622f100c293e455"
+                                                                                >
+                                                                                    26c9967db4301b66f8c453e69ec684252a3c7fc4d60c9f0cc622f100c293e455
+                                                                                </a>
+                                                                            </td>
+                                                                            <td class="text-center">383200</td>
+                                                                            <td class="text-center">a month ago</td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LTHJeXaPGwR533Hb36KcVvTKnrMpZdmk39">LTHJeXaPGwR533Hb36KcVvTKnrMpZdmk39</a>
+                                                                            </td>
+                                                                            <td class="text-center">
+                                                                                <a target="_blank" href="/address?address=LR7B7622v7dffSiX6JigN8ynCowyWX1S1e">LR7B7622v7dffSiX6JigN8ynCowyWX1S1e</a>
+                                                                            </td>
+                                                                            <td class="text-center">TriggerSmartContract</td>
+                                                                            <td class="text-center">SUCCESS</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </tab>
+                                                </div>
+                                            </tabset>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="chart_section">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <p>Account Growth</p>
+                                        <figure class="highcharts-figure">
+                                            <div id="account_growth" data-highcharts-chart="21">
+                                                <div
+                                                    id="highcharts-8y9ryqm-288"
+                                                    dir="ltr"
+                                                    class="highcharts-container"
+                                                    style="position: relative; overflow: hidden; width: 800px; height: 400px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
+                                                >
+                                                    <svg
+                                                        version="1.1"
+                                                        class="highcharts-root"
+                                                        style="font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Helvetica, sans-serif; font-size: 12px;"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="800"
+                                                        height="400"
+                                                        viewBox="0 0 800 400"
+                                                    >
+                                                        <desc>Created with Highcharts 6.2.0</desc>
+                                                        <defs>
+                                                            <clipPath id="highcharts-8y9ryqm-289"><rect x="0" y="0" width="723" height="268" fill="none"></rect></clipPath>
+                                                        </defs>
+                                                        <rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="800" height="400" rx="0" ry="0"></rect>
+                                                        <rect fill="none" class="highcharts-plot-background" x="67" y="54" width="723" height="268"></rect>
+                                                        <g class="highcharts-grid highcharts-xaxis-grid" data-z-index="1"><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 428.5 54 L 428.5 322" opacity="1"></path></g>
+                                                        <g class="highcharts-grid highcharts-yaxis-grid" data-z-index="1">
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 67 322.5 L 790 322.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 67 277.5 L 790 277.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 67 233.5 L 790 233.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 67 188.5 L 790 188.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 67 143.5 L 790 143.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 67 99.5 L 790 99.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 67 53.5 L 790 53.5" opacity="1"></path>
+                                                        </g>
+                                                        <rect fill="none" class="highcharts-plot-border" data-z-index="1" x="67" y="54" width="723" height="268"></rect>
+                                                        <g class="highcharts-axis highcharts-xaxis" data-z-index="2">
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 428.5 322 L 428.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-axis-line" stroke="#ccd6eb" stroke-width="1" data-z-index="7" d="M 67 322.5 L 790 322.5"></path>
+                                                        </g>
+                                                        <g class="highcharts-axis highcharts-yaxis" data-z-index="2">
+                                                            <text
+                                                                x="26.196117401123047"
+                                                                data-z-index="7"
+                                                                text-anchor="middle"
+                                                                transform="translate(0,0) rotate(270 26.196117401123047 188)"
+                                                                class="highcharts-axis-title"
+                                                                style="color: #666666; fill: #666666;"
+                                                                y="188"
+                                                            >
+                                                                <tspan>Values</tspan>
+                                                            </text>
+                                                            <path fill="none" class="highcharts-axis-line" data-z-index="7" d="M 67 54 L 67 322"></path>
+                                                        </g>
+                                                        <g class="highcharts-series-group" data-z-index="3">
+                                                            <g
+                                                                data-z-index="0.1"
+                                                                class="highcharts-series highcharts-series-0 highcharts-column-series highcharts-tracker"
+                                                                transform="translate(67,54) scale(1 1)"
+                                                                clip-path="url(https://lgcyscan.network/#highcharts-8y9ryqm-289)"
+                                                            >
+                                                                <rect x="188" y="46" width="131" height="223" fill="#2740a6" class="highcharts-point"></rect>
+                                                            </g>
+                                                            <g data-z-index="0.1" class="highcharts-markers highcharts-series-0 highcharts-column-series" transform="translate(67,54) scale(1 1)" clip-path="none"></g>
+                                                            <g
+                                                                data-z-index="0.1"
+                                                                class="highcharts-series highcharts-series-1 highcharts-column-series highcharts-tracker"
+                                                                transform="translate(67,54) scale(1 1)"
+                                                                clip-path="url(https://lgcyscan.network/#highcharts-8y9ryqm-289)"
+                                                            >
+                                                                <rect x="405" y="90" width="131" height="179" fill="#28a745" class="highcharts-point"></rect>
+                                                            </g>
+                                                            <g data-z-index="0.1" class="highcharts-markers highcharts-series-1 highcharts-column-series" transform="translate(67,54) scale(1 1)" clip-path="none"></g>
+                                                        </g>
+                                                        <text x="400" text-anchor="middle" class="highcharts-title" data-z-index="4" style="color: #333333; font-size: 18px; fill: #333333;" y="24"><tspan>Account Growth</tspan></text>
+                                                        <text x="400" text-anchor="middle" class="highcharts-subtitle" data-z-index="4" style="color: #666666; fill: #666666;" y="53"></text>
+                                                        <g class="highcharts-legend" data-z-index="7" transform="translate(268,356)">
+                                                            <rect fill="none" class="highcharts-legend-box" rx="0" ry="0" x="0" y="0" width="264" height="29" visibility="visible"></rect>
+                                                            <g data-z-index="1">
+                                                                <g>
+                                                                    <g class="highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0" data-z-index="1" transform="translate(8,3)">
+                                                                        <text x="21" style="color: #333333; font-size: 12px; font-weight: bold; cursor: pointer; fill: #333333;" text-anchor="start" data-z-index="2" y="15">
+                                                                            <tspan>Total Accounts</tspan>
+                                                                        </text>
+                                                                        <rect x="2" y="4" width="12" height="12" fill="#2740a6" rx="6" ry="6" class="highcharts-point" data-z-index="3"></rect>
+                                                                    </g>
+                                                                    <g class="highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-1" data-z-index="1" transform="translate(139.13335418701172,3)">
+                                                                        <text x="21" y="15" style="color: #333333; font-size: 12px; font-weight: bold; cursor: pointer; fill: #333333;" text-anchor="start" data-z-index="2">
+                                                                            <tspan>Active Accounts</tspan>
+                                                                        </text>
+                                                                        <rect x="2" y="4" width="12" height="12" fill="#28a745" rx="6" ry="6" class="highcharts-point" data-z-index="3"></rect>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                        <g class="highcharts-axis-labels highcharts-xaxis-labels" data-z-index="7">
+                                                            <text x="428.5" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">0</text>
+                                                        </g>
+                                                        <g class="highcharts-axis-labels highcharts-yaxis-labels" data-z-index="7">
+                                                            <text x="52" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="326" opacity="1">0</text>
+                                                            <text x="52" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="281" opacity="1">5</text>
+                                                            <text x="52" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="237" opacity="1">10</text>
+                                                            <text x="52" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="192" opacity="1">15</text>
+                                                            <text x="52" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="147" opacity="1">20</text>
+                                                            <text x="52" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="103" opacity="1">25</text>
+                                                            <text x="52" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="58" opacity="1">30</text>
+                                                        </g>
+                                                        <text x="790" class="highcharts-credits" text-anchor="end" data-z-index="8" style="cursor: pointer; color: #999999; font-size: 9px; fill: #999999;" y="395">lgcyscan.network</text>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <p>Contract Trigger</p>
+                                        <figure class="highcharts-figure">
+                                            <div id="contract_trigger" data-highcharts-chart="22">
+                                                <div
+                                                    id="highcharts-8y9ryqm-292"
+                                                    dir="ltr"
+                                                    class="highcharts-container"
+                                                    style="position: relative; overflow: hidden; width: 800px; height: 400px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
+                                                >
+                                                    <svg
+                                                        version="1.1"
+                                                        class="highcharts-root"
+                                                        style="font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Helvetica, sans-serif; font-size: 12px;"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="800"
+                                                        height="400"
+                                                        viewBox="0 0 800 400"
+                                                    >
+                                                        <desc>Created with Highcharts 6.2.0</desc>
+                                                        <defs>
+                                                            <clipPath id="highcharts-8y9ryqm-293"><rect x="0" y="0" width="741" height="268" fill="none"></rect></clipPath>
+                                                        </defs>
+                                                        <rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="800" height="400" rx="0" ry="0"></rect>
+                                                        <rect fill="none" class="highcharts-plot-background" x="49" y="54" width="741" height="268"></rect>
+                                                        <g class="highcharts-grid highcharts-xaxis-grid" data-z-index="1">
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 110.5 54 L 110.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 172.5 54 L 172.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 233.5 54 L 233.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 295.5 54 L 295.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 357.5 54 L 357.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 419.5 54 L 419.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 480.5 54 L 480.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 542.5 54 L 542.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 604.5 54 L 604.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 666.5 54 L 666.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 727.5 54 L 727.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 789.5 54 L 789.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 48.5 54 L 48.5 322" opacity="1"></path>
+                                                        </g>
+                                                        <g class="highcharts-grid highcharts-yaxis-grid" data-z-index="1">
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 49 322.5 L 790 322.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 49 268.5 L 790 268.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 49 215.5 L 790 215.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 49 161.5 L 790 161.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 49 108.5 L 790 108.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 49 53.5 L 790 53.5" opacity="1"></path>
+                                                        </g>
+                                                        <rect fill="none" class="highcharts-plot-border" data-z-index="1" x="49" y="54" width="741" height="268"></rect>
+                                                        <g class="highcharts-axis highcharts-xaxis" data-z-index="2">
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 110.5 322 L 110.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 172.5 322 L 172.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 233.5 322 L 233.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 295.5 322 L 295.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 357.5 322 L 357.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 419.5 322 L 419.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 480.5 322 L 480.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 542.5 322 L 542.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 604.5 322 L 604.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 666.5 322 L 666.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 727.5 322 L 727.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 790.5 322 L 790.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 48.5 322 L 48.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-axis-line" stroke="#ccd6eb" stroke-width="1" data-z-index="7" d="M 49 322.5 L 790 322.5"></path>
+                                                        </g>
+                                                        <g class="highcharts-axis highcharts-yaxis" data-z-index="2"><path fill="none" class="highcharts-axis-line" data-z-index="7" d="M 49 54 L 49 322"></path></g>
+                                                        <g class="highcharts-series-group" data-z-index="3">
+                                                            <g
+                                                                data-z-index="0.1"
+                                                                class="highcharts-series highcharts-series-0 highcharts-line-series"
+                                                                transform="translate(49,54) scale(1 1)"
+                                                                clip-path="url(https://lgcyscan.network/#highcharts-8y9ryqm-293)"
+                                                            >
+                                                                <path
+                                                                    fill="none"
+                                                                    d="M 30.875 268 L 92.625 268 L 154.375 268 L 216.125 268 L 277.875 268 L 339.625 268 L 401.375 268 L 463.125 268 L 524.875 268 L 586.625 53.599999999999994 L 648.375 268 L 710.125 268"
+                                                                    class="highcharts-graph"
+                                                                    data-z-index="1"
+                                                                    stroke="#2740a6"
+                                                                    stroke-width="2"
+                                                                    stroke-linejoin="round"
+                                                                    stroke-linecap="round"
+                                                                ></path>
+                                                                <path
+                                                                    fill="none"
+                                                                    d="M 20.875 268 L 30.875 268 L 92.625 268 L 154.375 268 L 216.125 268 L 277.875 268 L 339.625 268 L 401.375 268 L 463.125 268 L 524.875 268 L 586.625 53.599999999999994 L 648.375 268 L 710.125 268 L 720.125 268"
+                                                                    stroke-linejoin="round"
+                                                                    stroke="rgba(192,192,192,0.0001)"
+                                                                    stroke-width="22"
+                                                                    visibility="visible"
+                                                                    data-z-index="2"
+                                                                    class="highcharts-tracker-line"
+                                                                ></path>
+                                                            </g>
+                                                            <g
+                                                                data-z-index="0.1"
+                                                                class="highcharts-markers highcharts-series-0 highcharts-line-series highcharts-tracker"
+                                                                transform="translate(49,54) scale(1 1)"
+                                                                clip-path="url(https://lgcyscan.network/#highcharts-8y9ryqm-306)"
+                                                            >
+                                                                <path fill="#2740a6" d="M 34 268 A 4 4 0 1 1 33.99999800000017 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 96 268 A 4 4 0 1 1 95.99999800000016 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 158 268 A 4 4 0 1 1 157.99999800000018 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 220 268 A 4 4 0 1 1 219.99999800000018 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 281 268 A 4 4 0 1 1 280.9999980000002 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 343 268 A 4 4 0 1 1 342.9999980000002 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 405 268 A 4 4 0 1 1 404.9999980000002 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 467 268 A 4 4 0 1 1 466.9999980000002 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 528 268 A 4 4 0 1 1 527.9999980000001 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 590 54 A 4 4 0 1 1 589.9999980000001 53.99600000066666 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 652 268 A 4 4 0 1 1 651.9999980000001 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 714 268 A 4 4 0 1 1 713.9999980000001 267.99600000066664 Z" class="highcharts-point"></path>
+                                                            </g>
+                                                        </g>
+                                                        <text x="400" text-anchor="middle" class="highcharts-title" data-z-index="4" style="color: #333333; font-size: 18px; fill: #333333;" y="24"><tspan>Daily Contract Trigger</tspan></text>
+                                                        <text x="400" text-anchor="middle" class="highcharts-subtitle" data-z-index="4" style="color: #666666; fill: #666666;" y="53"></text>
+                                                        <g class="highcharts-legend" data-z-index="7" transform="translate(332,356)">
+                                                            <rect fill="none" class="highcharts-legend-box" rx="0" ry="0" x="0" y="0" width="135" height="29" visibility="visible"></rect>
+                                                            <g data-z-index="1">
+                                                                <g>
+                                                                    <g class="highcharts-legend-item highcharts-line-series highcharts-color-undefined highcharts-series-0" data-z-index="1" transform="translate(8,3)">
+                                                                        <path fill="none" d="M 0 11 L 16 11" class="highcharts-graph" stroke="#2740a6" stroke-width="2"></path>
+                                                                        <path fill="#2740a6" d="M 12 11 A 4 4 0 1 1 11.999998000000167 10.996000000666664 Z" class="highcharts-point"></path>
+                                                                        <text x="21" style="color: #333333; font-size: 12px; font-weight: bold; cursor: pointer; fill: #333333;" text-anchor="start" data-z-index="2" y="15">
+                                                                            <tspan>Number Of Calls</tspan>
+                                                                        </text>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                        <g class="highcharts-axis-labels highcharts-xaxis-labels" data-z-index="7">
+                                                            <text x="79.875" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Jan</text>
+                                                            <text x="141.625" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Feb</text>
+                                                            <text x="203.375" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Mar</text>
+                                                            <text x="265.125" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Apr</text>
+                                                            <text x="326.875" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">May</text>
+                                                            <text x="388.625" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Jun</text>
+                                                            <text x="450.375" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Jul</text>
+                                                            <text x="512.125" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Aug</text>
+                                                            <text x="573.875" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Sep</text>
+                                                            <text x="635.625" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Oct</text>
+                                                            <text x="697.375" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Nov</text>
+                                                            <text x="759.125" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Dec</text>
+                                                        </g>
+                                                        <g class="highcharts-axis-labels highcharts-yaxis-labels" data-z-index="7">
+                                                            <text x="34" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="326" opacity="1">0</text>
+                                                            <text x="34" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="272" opacity="1">0.25</text>
+                                                            <text x="34" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="219" opacity="1">0.5</text>
+                                                            <text x="34" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="165" opacity="1">0.75</text>
+                                                            <text x="34" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="112" opacity="1">1</text>
+                                                            <text x="34" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="58" opacity="1">1.25</text>
+                                                        </g>
+                                                        <text x="790" class="highcharts-credits" text-anchor="end" data-z-index="8" style="cursor: pointer; color: #999999; font-size: 9px; fill: #999999;" y="395">lgcyscan.network</text>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="chart_section">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <p>Daily Resource Consumption</p>
+                                        <figure class="highcharts-figure">
+                                            <div id="resource_consumption" data-highcharts-chart="23">
+                                                <div
+                                                    id="highcharts-8y9ryqm-308"
+                                                    dir="ltr"
+                                                    class="highcharts-container"
+                                                    style="position: relative; overflow: hidden; width: 800px; height: 400px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
+                                                >
+                                                    <svg
+                                                        version="1.1"
+                                                        class="highcharts-root"
+                                                        style="font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Helvetica, sans-serif; font-size: 12px;"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="800"
+                                                        height="400"
+                                                        viewBox="0 0 800 400"
+                                                    >
+                                                        <desc>Created with Highcharts 6.2.0</desc>
+                                                        <defs>
+                                                            <clipPath id="highcharts-8y9ryqm-309"><rect x="0" y="0" width="737" height="268" fill="none"></rect></clipPath>
+                                                        </defs>
+                                                        <rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="800" height="400" rx="0" ry="0"></rect>
+                                                        <rect fill="none" class="highcharts-plot-background" x="53" y="54" width="737" height="268"></rect>
+                                                        <g class="highcharts-grid highcharts-xaxis-grid" data-z-index="1">
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 113.5 54 L 113.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 175.5 54 L 175.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 236.5 54 L 236.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 298.5 54 L 298.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 359.5 54 L 359.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 420.5 54 L 420.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 482.5 54 L 482.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 543.5 54 L 543.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 605.5 54 L 605.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 666.5 54 L 666.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 728.5 54 L 728.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 789.5 54 L 789.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 52.5 54 L 52.5 322" opacity="1"></path>
+                                                        </g>
+                                                        <g class="highcharts-grid highcharts-yaxis-grid" data-z-index="1">
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 53 322.5 L 790 322.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 53 268.5 L 790 268.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 53 215.5 L 790 215.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 53 161.5 L 790 161.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 53 108.5 L 790 108.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 53 53.5 L 790 53.5" opacity="1"></path>
+                                                        </g>
+                                                        <rect fill="none" class="highcharts-plot-border" data-z-index="1" x="53" y="54" width="737" height="268"></rect>
+                                                        <g class="highcharts-axis highcharts-xaxis" data-z-index="2">
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 113.5 322 L 113.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 175.5 322 L 175.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 236.5 322 L 236.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 298.5 322 L 298.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 359.5 322 L 359.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 421.5 322 L 421.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 482.5 322 L 482.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 543.5 322 L 543.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 605.5 322 L 605.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 666.5 322 L 666.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 728.5 322 L 728.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 790.5 322 L 790.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 52.5 322 L 52.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-axis-line" stroke="#ccd6eb" stroke-width="1" data-z-index="7" d="M 53 322.5 L 790 322.5"></path>
+                                                        </g>
+                                                        <g class="highcharts-axis highcharts-yaxis" data-z-index="2"><path fill="none" class="highcharts-axis-line" data-z-index="7" d="M 53 54 L 53 322"></path></g>
+                                                        <g class="highcharts-series-group" data-z-index="3">
+                                                            <g
+                                                                data-z-index="0.1"
+                                                                class="highcharts-series highcharts-series-0 highcharts-line-series"
+                                                                transform="translate(53,54) scale(1 1)"
+                                                                clip-path="url(https://lgcyscan.network/#highcharts-8y9ryqm-309)"
+                                                            >
+                                                                <path
+                                                                    fill="none"
+                                                                    d="M 30.708333333333 268 L 92.125 268 L 153.54166666667 268 L 214.95833333333 268 L 276.375 268 L 337.79166666667 268 L 399.20833333333 268 L 460.625 268 L 522.04166666667 268 L 583.45833333333 155.2275795552 L 644.875 52.31476848 L 706.29166666667 268"
+                                                                    class="highcharts-graph"
+                                                                    data-z-index="1"
+                                                                    stroke="#2740a6"
+                                                                    stroke-width="2"
+                                                                    stroke-linejoin="round"
+                                                                    stroke-linecap="round"
+                                                                ></path>
+                                                                <path
+                                                                    fill="none"
+                                                                    d="M 20.708333333333 268 L 30.708333333333 268 L 92.125 268 L 153.54166666667 268 L 214.95833333333 268 L 276.375 268 L 337.79166666667 268 L 399.20833333333 268 L 460.625 268 L 522.04166666667 268 L 583.45833333333 155.2275795552 L 644.875 52.31476848 L 706.29166666667 268 L 716.29166666667 268"
+                                                                    stroke-linejoin="round"
+                                                                    stroke="rgba(192,192,192,0.0001)"
+                                                                    stroke-width="22"
+                                                                    visibility="visible"
+                                                                    data-z-index="2"
+                                                                    class="highcharts-tracker-line"
+                                                                ></path>
+                                                            </g>
+                                                            <g
+                                                                data-z-index="0.1"
+                                                                class="highcharts-markers highcharts-series-0 highcharts-line-series highcharts-tracker"
+                                                                transform="translate(53,54) scale(1 1)"
+                                                                clip-path="url(https://lgcyscan.network/#highcharts-8y9ryqm-322)"
+                                                            >
+                                                                <path fill="#2740a6" d="M 34 268 A 4 4 0 1 1 33.99999800000017 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 96 268 A 4 4 0 1 1 95.99999800000016 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 157 268 A 4 4 0 1 1 156.99999800000018 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 218 268 A 4 4 0 1 1 217.99999800000018 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 280 268 A 4 4 0 1 1 279.9999980000002 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 341 268 A 4 4 0 1 1 340.9999980000002 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 403 268 A 4 4 0 1 1 402.9999980000002 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 464 268 A 4 4 0 1 1 463.9999980000002 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 526 268 A 4 4 0 1 1 525.9999980000001 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 587 155 A 4 4 0 1 1 586.9999980000001 154.99600000066667 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 648 52 A 4 4 0 1 1 647.9999980000001 51.99600000066666 Z" class="highcharts-point"></path>
+                                                                <path fill="#2740a6" d="M 710 268 A 4 4 0 1 1 709.9999980000001 267.99600000066664 Z" class="highcharts-point"></path>
+                                                            </g>
+                                                        </g>
+                                                        <text x="400" text-anchor="middle" class="highcharts-title" data-z-index="4" style="color: #333333; font-size: 18px; fill: #333333;" y="24">
+                                                            <tspan>Daily Resource Consumption</tspan>
+                                                        </text>
+                                                        <text x="400" text-anchor="middle" class="highcharts-subtitle" data-z-index="4" style="color: #666666; fill: #666666;" y="53"></text>
+                                                        <g class="highcharts-legend" data-z-index="7" transform="translate(365,356)">
+                                                            <rect fill="none" class="highcharts-legend-box" rx="0" ry="0" x="0" y="0" width="70" height="29" visibility="visible"></rect>
+                                                            <g data-z-index="1">
+                                                                <g>
+                                                                    <g class="highcharts-legend-item highcharts-line-series highcharts-color-undefined highcharts-series-0" data-z-index="1" transform="translate(8,3)">
+                                                                        <path fill="none" d="M 0 11 L 16 11" class="highcharts-graph" stroke="#2740a6" stroke-width="2"></path>
+                                                                        <path fill="#2740a6" d="M 12 11 A 4 4 0 1 1 11.999998000000167 10.996000000666664 Z" class="highcharts-point"></path>
+                                                                        <text x="21" style="color: #333333; font-size: 12px; font-weight: bold; cursor: pointer; fill: #333333;" text-anchor="start" data-z-index="2" y="15">
+                                                                            <tspan>USDL</tspan>
+                                                                        </text>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                        <g class="highcharts-axis-labels highcharts-xaxis-labels" data-z-index="7">
+                                                            <text x="83.70833333333667" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Jan</text>
+                                                            <text x="145.12499999999665" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Feb</text>
+                                                            <text x="206.54166666666666" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Mar</text>
+                                                            <text x="267.95833333333667" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Apr</text>
+                                                            <text x="329.3749999999967" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">May</text>
+                                                            <text x="390.7916666666667" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Jun</text>
+                                                            <text x="452.20833333333667" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Jul</text>
+                                                            <text x="513.6249999999966" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Aug</text>
+                                                            <text x="575.0416666666666" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Sep</text>
+                                                            <text x="636.4583333333367" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Oct</text>
+                                                            <text x="697.8749999999966" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Nov</text>
+                                                            <text x="759.2916666666666" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Dec</text>
+                                                        </g>
+                                                        <g class="highcharts-axis-labels highcharts-yaxis-labels" data-z-index="7">
+                                                            <text x="38" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="326" opacity="1">0</text>
+                                                            <text x="38" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="272" opacity="1">250</text>
+                                                            <text x="38" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="219" opacity="1">500</text>
+                                                            <text x="38" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="165" opacity="1">750</text>
+                                                            <text x="38" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="112" opacity="1">1000</text>
+                                                            <text x="38" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="58" opacity="1">1250</text>
+                                                        </g>
+                                                        <text x="790" class="highcharts-credits" text-anchor="end" data-z-index="8" style="cursor: pointer; color: #999999; font-size: 9px; fill: #999999;" y="395">lgcyscan.network</text>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <p>Daily LGCY Frozen</p>
+                                        <figure class="highcharts-figure">
+                                            <div id="frozen" data-highcharts-chart="24">
+                                                <div
+                                                    id="highcharts-8y9ryqm-324"
+                                                    dir="ltr"
+                                                    class="highcharts-container"
+                                                    style="position: relative; overflow: hidden; width: 800px; height: 400px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
+                                                >
+                                                    <svg
+                                                        version="1.1"
+                                                        class="highcharts-root"
+                                                        style="font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Helvetica, sans-serif; font-size: 12px;"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="800"
+                                                        height="400"
+                                                        viewBox="0 0 800 400"
+                                                    >
+                                                        <desc>Created with Highcharts 6.2.0</desc>
+                                                        <defs>
+                                                            <clipPath id="highcharts-8y9ryqm-325"><rect x="0" y="0" width="749" height="268" fill="none"></rect></clipPath>
+                                                        </defs>
+                                                        <rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="800" height="400" rx="0" ry="0"></rect>
+                                                        <rect fill="none" class="highcharts-plot-background" x="41" y="54" width="749" height="268"></rect>
+                                                        <g class="highcharts-grid highcharts-xaxis-grid" data-z-index="1">
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 102.5 54 L 102.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 165.5 54 L 165.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 227.5 54 L 227.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 290.5 54 L 290.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 352.5 54 L 352.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 414.5 54 L 414.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 477.5 54 L 477.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 539.5 54 L 539.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 602.5 54 L 602.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 664.5 54 L 664.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 727.5 54 L 727.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 789.5 54 L 789.5 322" opacity="1"></path>
+                                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 40.5 54 L 40.5 322" opacity="1"></path>
+                                                        </g>
+                                                        <g class="highcharts-grid highcharts-yaxis-grid" data-z-index="1">
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 41 322.5 L 790 322.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 41 255.5 L 790 255.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 41 188.5 L 790 188.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 41 121.5 L 790 121.5" opacity="1"></path>
+                                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 41 53.5 L 790 53.5" opacity="1"></path>
+                                                        </g>
+                                                        <rect fill="none" class="highcharts-plot-border" data-z-index="1" x="41" y="54" width="749" height="268"></rect>
+                                                        <g class="highcharts-axis highcharts-xaxis" data-z-index="2">
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 102.5 322 L 102.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 165.5 322 L 165.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 227.5 322 L 227.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 290.5 322 L 290.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 352.5 322 L 352.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 415.5 322 L 415.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 477.5 322 L 477.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 539.5 322 L 539.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 602.5 322 L 602.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 664.5 322 L 664.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 727.5 322 L 727.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 790.5 322 L 790.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 40.5 322 L 40.5 332" opacity="1"></path>
+                                                            <path fill="none" class="highcharts-axis-line" stroke="#ccd6eb" stroke-width="1" data-z-index="7" d="M 41 322.5 L 790 322.5"></path>
+                                                        </g>
+                                                        <g class="highcharts-axis highcharts-yaxis" data-z-index="2"><path fill="none" class="highcharts-axis-line" data-z-index="7" d="M 41 54 L 41 322"></path></g>
+                                                        <g class="highcharts-series-group" data-z-index="3">
+                                                            <g
+                                                                data-z-index="0.1"
+                                                                class="highcharts-series highcharts-series-0 highcharts-line-series"
+                                                                transform="translate(41,54) scale(1 1)"
+                                                                clip-path="url(https://lgcyscan.network/#highcharts-8y9ryqm-325)"
+                                                            >
+                                                                <path
+                                                                    fill="none"
+                                                                    d="M 31.208333333333 268 L 93.625 268 L 156.04166666667 268 L 218.45833333333 268 L 280.875 268 L 343.29166666667 268 L 405.70833333333 268 L 468.125 268 L 530.54166666667 268 L 592.95833333333 257.95 L 655.375 23.11499999999998 L 717.79166666667 264.65"
+                                                                    class="highcharts-graph"
+                                                                    data-z-index="1"
+                                                                    stroke="#28a745"
+                                                                    stroke-width="2"
+                                                                    stroke-linejoin="round"
+                                                                    stroke-linecap="round"
+                                                                ></path>
+                                                                <path
+                                                                    fill="none"
+                                                                    d="M 21.208333333333 268 L 31.208333333333 268 L 93.625 268 L 156.04166666667 268 L 218.45833333333 268 L 280.875 268 L 343.29166666667 268 L 405.70833333333 268 L 468.125 268 L 530.54166666667 268 L 592.95833333333 257.95 L 655.375 23.11499999999998 L 717.79166666667 264.65 L 727.79166666667 264.65"
+                                                                    stroke-linejoin="round"
+                                                                    stroke="rgba(192,192,192,0.0001)"
+                                                                    stroke-width="22"
+                                                                    visibility="visible"
+                                                                    data-z-index="2"
+                                                                    class="highcharts-tracker-line"
+                                                                ></path>
+                                                            </g>
+                                                            <g
+                                                                data-z-index="0.1"
+                                                                class="highcharts-markers highcharts-series-0 highcharts-line-series highcharts-tracker"
+                                                                transform="translate(41,54) scale(1 1)"
+                                                                clip-path="url(https://lgcyscan.network/#highcharts-8y9ryqm-338)"
+                                                            >
+                                                                <path fill="#28a745" d="M 35 268 A 4 4 0 1 1 34.99999800000017 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#28a745" d="M 97 268 A 4 4 0 1 1 96.99999800000016 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#28a745" d="M 160 268 A 4 4 0 1 1 159.99999800000018 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#28a745" d="M 222 268 A 4 4 0 1 1 221.99999800000018 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#28a745" d="M 284 268 A 4 4 0 1 1 283.9999980000002 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#28a745" d="M 347 268 A 4 4 0 1 1 346.9999980000002 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#28a745" d="M 409 268 A 4 4 0 1 1 408.9999980000002 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#28a745" d="M 472 268 A 4 4 0 1 1 471.9999980000002 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#28a745" d="M 534 268 A 4 4 0 1 1 533.9999980000001 267.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#28a745" d="M 596 258 A 4 4 0 1 1 595.9999980000001 257.99600000066664 Z" class="highcharts-point"></path>
+                                                                <path fill="#28a745" d="M 659 23 A 4 4 0 1 1 658.9999980000001 22.996000000666665 Z" class="highcharts-point"></path>
+                                                                <path fill="#28a745" d="M 721 265 A 4 4 0 1 1 720.9999980000001 264.99600000066664 Z" class="highcharts-point"></path>
+                                                            </g>
+                                                        </g>
+                                                        <text x="400" text-anchor="middle" class="highcharts-title" data-z-index="4" style="color: #333333; font-size: 18px; fill: #333333;" y="24"><tspan>Daily LGCY Frozen</tspan></text>
+                                                        <text x="400" text-anchor="middle" class="highcharts-subtitle" data-z-index="4" style="color: #666666; fill: #666666;" y="53"></text>
+                                                        <g class="highcharts-legend" data-z-index="7" transform="translate(343,356)">
+                                                            <rect fill="none" class="highcharts-legend-box" rx="0" ry="0" x="0" y="0" width="113" height="29" visibility="visible"></rect>
+                                                            <g data-z-index="1">
+                                                                <g>
+                                                                    <g class="highcharts-legend-item highcharts-line-series highcharts-color-undefined highcharts-series-0" data-z-index="1" transform="translate(8,3)">
+                                                                        <path fill="none" d="M 0 11 L 16 11" class="highcharts-graph" stroke="#28a745" stroke-width="2"></path>
+                                                                        <path fill="#28a745" d="M 12 11 A 4 4 0 1 1 11.999998000000167 10.996000000666664 Z" class="highcharts-point"></path>
+                                                                        <text x="21" style="color: #333333; font-size: 12px; font-weight: bold; cursor: pointer; fill: #333333;" text-anchor="start" data-z-index="2" y="15">
+                                                                            <tspan>LGCY Frozen</tspan>
+                                                                        </text>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                        <g class="highcharts-axis-labels highcharts-xaxis-labels" data-z-index="7">
+                                                            <text x="72.20833333333667" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Jan</text>
+                                                            <text x="134.62499999999665" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Feb</text>
+                                                            <text x="197.04166666666666" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Mar</text>
+                                                            <text x="259.45833333333667" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Apr</text>
+                                                            <text x="321.8749999999967" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">May</text>
+                                                            <text x="384.2916666666667" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Jun</text>
+                                                            <text x="446.70833333333667" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Jul</text>
+                                                            <text x="509.12499999999665" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Aug</text>
+                                                            <text x="571.5416666666666" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Sep</text>
+                                                            <text x="633.9583333333367" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Oct</text>
+                                                            <text x="696.3749999999966" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Nov</text>
+                                                            <text x="758.7916666666666" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="middle" transform="translate(0,0)" y="341" opacity="1">Dec</text>
+                                                        </g>
+                                                        <g class="highcharts-axis-labels highcharts-yaxis-labels" data-z-index="7">
+                                                            <text x="26" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="326" opacity="1">0</text>
+                                                            <text x="26" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="259" opacity="1">2M</text>
+                                                            <text x="26" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="192" opacity="1">4M</text>
+                                                            <text x="26" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="125" opacity="1">6M</text>
+                                                            <text x="26" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="58" opacity="1">8M</text>
+                                                        </g>
+                                                        <text x="790" class="highcharts-credits" text-anchor="end" data-z-index="8" style="cursor: pointer; color: #999999; font-size: 9px; fill: #999999;" y="395">lgcyscan.network</text>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <app-footer>
+                <footer id="footer">
+                    <div class="footer-top">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 footer-links">
+                                    <img class="img-fluid" src="images/footer_logo.png" />
+                                    <div class="social-links my-4">
+                                        <a target="_blank" href="https://t.me/testlgcy"><i class="bx bxl-telegram"></i></a>
+                                        <a target="_blank" href="https://twitter.com/testlgcy"><i class="bx bxl-twitter"></i></a>
+                                        <a class="instagram" target="_blank" href="https://www.youtube.com/testlgcy"><i class="bx bxl-youtube"></i></a>
+                                        <a class="" target="_blank" href="https://www.medium.com/testlgcy"><i class="bx bxl-medium"></i></a>
+                                        <a class="linkedin" target="_blank" href="https://in.linkedin.com/testlgcy"><i  class="bx bxl-linkedin"></i></a>
+                                    </div>
+                                    <p>Copyright © 2021 LGCY | All Rights Reserved</p>
+                                </div>
+                                <div class="col-lg-2 col-md-6 footer-links">
+                                    <h4 style="font-weight: 700 !important;">About Us</h4>
+                                    <ul>
+                                        <li><a href="/contact-us">Contact Us</a></li>
+                                        <li><a href="/brand">Brand Assets</a></li>
+                                        <li><a href="/terms">Terms 0f Service</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-2 col-md-6 footer-links">
+                                    <h4 style="font-weight: 700 !important;">Others</h4>
+                                    <ul>
+                                        <li><a href="/devops">Developer APIs</a></li>
+                                        <li><a href="/knowledge">Knowledge Base</a></li>
+                                        <li><a href="/news">Newsletter</a></li>
+                                        <li><a href="/network">Network Status</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 col-md-6 footer-contact">
+                                    <h4>Subscribe to get the latest insights</h4>
+                                    <form autocomplete="off" class="subscribe subsform ng-untouched ng-pristine ng-invalid" novalidate="">
+                                        <div class="input-group">
+                                            <input
+                                                aria-describedby="basic-addon1"
+                                                aria-label="email_address"
+                                                class="form-control ng-untouched ng-pristine ng-invalid"
+                                                name="email"
+                                                ngmodel=""
+                                                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,10})+$"
+                                                placeholder="Email address"
+                                                required=""
+                                                type="email"
+                                                maxlength="80"
+                                            />
+                                            <div class="input-group-append">
+                                                <!---->
+                                                <button class="btn btn-success" type="submit" disabled="">Subscribe</button>
+                                                <!---->
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </app-footer>
+            <a class="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+        </app-home>
+    </app-root>
+    <script type="text/javascript" src="runtime.9824c1651426f3283ccf.js"></script>
+    <script type="text/javascript" src="polyfills.5b627bb49e8ce13015b2.js"></script>
+    <script type="text/javascript" src="scripts.635eb88807e299ae7675.js"></script>
+    <script type="text/javascript" src="main.5d1a73d308336e05ca95.js"></script>
+    <script type="text/javascript">
+        var themes = localStorage.getItem("lgcy-Theme");
+        let body = document.getElementsByTagName("body")[0];
+        if (themes == "darktheme") {
+            body.classList.add("darktheme");
+            body.classList.remove("lighttheme");
+        } else {
+            body.classList.add("lighttheme");
+            body.classList.remove("darktheme");
+        }
+    </script>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    <svg
+        id="SvgjsSvg1001"
+        width="2"
+        height="0"
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns:svgjs="http://svgjs.dev"
+        style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"
+    >
+        <defs id="SvgjsDefs1002"></defs>
+        <polyline id="SvgjsPolyline1003" points="0,0"></polyline>
+        <path id="SvgjsPath1004" d="M0 0 "></path>
+    </svg>
+	</body>
+    <loom-container id="lo-engage-ext-container"><loom-shadow classname="resolved"></loom-shadow></loom-container>
+    <loom-container id="lo-companion-container"><loom-shadow classname="resolved"></loom-shadow></loom-container>
 </html>
