@@ -7,46 +7,43 @@ const web3 = new Web3('https://data-seed-prebsc-1-s1.binance.org:8545/');
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
 
-const searchOverweb3 = (searchTerm)=>{
-  
-  var requestStr = searchTerm.split('0x').join('');
+  const searchOverweb3 = (searchTerm) => {
 
-  if (requestStr.length === 40)
-    return goToAddrInfos(requestStr)
-  else if(requestStr.length === 64) {
-    if(/[0-9a-zA-Z]{64}?/.test(requestStr))
-      return goToTxInfos('0x'+requestStr)
-    else if(/[0-9]{1,7}?/.test(requestStr))
-      return goToBlockInfos(requestStr)
-  }else if(parseInt(requestStr) > 0)
-    return goToBlockInfos(parseInt(requestStr))
+    var requestStr = searchTerm.split('0x').join('');
 
-  alert('Don\'t know how to handle '+ requestStr)
-}
+    if (requestStr.length === 40)
+      return goToAddrInfos(requestStr)
+    else if (requestStr.length === 64) {
+      if (/[0-9a-zA-Z]{64}?/.test(requestStr))
+        return goToTxInfos('0x' + requestStr)
+      else if (/[0-9]{1,7}?/.test(requestStr))
+        return goToBlockInfos(requestStr)
+    } else if (parseInt(requestStr) > 0)
+      return goToBlockInfos(parseInt(requestStr))
 
-const goToBlockInfos = (requestStr)=> {
-  debugger;
-  console.log(requestStr);
+    alert('Don\'t know how to handle ' + requestStr)
+  }
 
-  web3.eth.getBlock(requestStr,function(error, result) {
-      if(!error) {
-        console.log(result);
-      } else {
-          console.log(error);
-      }
-  });
-}
+  const goToBlockInfos = async (requestStr) => {
+    try {
+      const result = await web3.eth.getBlock(requestStr);
+      console.log({ result });
+    } catch (error) {
+      console.log(error);
 
-const goToAddrInfos = (requestStr)=> {
-  console.log(requestStr);
-}
+    }
+  }
 
-const goToTxInfos  = (requestStr)=> {
-   console.log(requestStr);
-}
+  const goToAddrInfos = (requestStr) => {
+    console.log(requestStr);
+  }
+
+  const goToTxInfos = (requestStr) => {
+    console.log(requestStr);
+  }
 
   return (
-    <div className="row anik1">
+    <div className="row anik">
       <div
         className="col-md-12 col-lg-12 aos-init aos-animate d-flex justify-content-end"
         data-aos="fade-up"
@@ -90,7 +87,7 @@ const goToTxInfos  = (requestStr)=> {
                 <button
                   className="btn_search"
                   onClick={(e) => {
-                    debugger;
+                    e.preventDefault();
                     searchOverweb3(searchTerm);
                   }}
                   disabled=""
